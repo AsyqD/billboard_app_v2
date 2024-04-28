@@ -1,19 +1,19 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF0DB;
+    background: ghostwhite;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
     color: #000;
 }
 
 div, p, input, header, a, form {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ul, li {
@@ -23,8 +23,8 @@ ul, li {
 }
 
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -110,7 +110,7 @@ a {
 
 }
 
-.sub-menu-link:hover span{
+.sub-menu-link:hover span {
     transform: translateX(5px);
 }
 
@@ -120,7 +120,7 @@ a {
 
 
 .sidebar {
-    background-color: #FFF;
+    background: ghostwhite;
     width: 100%;
     margin-bottom: 40px;
 }
@@ -157,29 +157,33 @@ a {
 .enter img {
     margin-right: 10px;
 }
+
 .name {
     display: block;
 }
 
 .left_menu {
     position: fixed;
-    background: #A52800;
+    background: #0E0B85;
     width: 320px;
     height: 100%;
     padding: 15px 0;
 }
 
-.left_menu_items h1, a{
+.left_menu_items h1, a {
     color: #fff;
 }
 
-.left_menu_items h1 {
-    font-size: 35px;
-    width: 235px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 90px;
-}
+/*.left_menu_items h1 {*/
+/*  font-family: "Ruslan Display", sans-serif;*/
+/*  font-size: 35px;*/
+/*  width: 235px;*/
+/*  margin: 0 auto;*/
+/*  text-align: center;*/
+/*  margin-bottom: 90px;*/
+/*}*/
+
+
 
 .list {
     display: block;
@@ -189,7 +193,6 @@ a {
 .list a {
     font-size: 20px;
     margin-left: 74px;
-    font-size: 800;
 }
 
 .list li {
@@ -225,6 +228,11 @@ a {
     background-color: #FFF;
     padding: 20px;
     margin-bottom: 20px;
+
+}
+
+.cards_item:first-child {
+    background: orange !important;
 }
 
 .image {
@@ -249,9 +257,8 @@ a {
 }
 
 
-
 .text_item h3 {
-    width:  120px;
+    width: 120px;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -259,6 +266,7 @@ a {
 .text_item h3:nth-child(6n) {
     margin-bottom: 0;
 }
+
 .text_item p {
     font-weight: 600;
     font-size: 15px;
@@ -302,7 +310,8 @@ a {
 
 .order_second button {
     margin-right: 3px;
-    background: #FF5959;
+    border-radius: 10px;
+    background: #ff0000;
 }
 
 .order_second button:nth-child(6n) {
@@ -312,17 +321,18 @@ a {
 .order_second {
     margin-bottom: 23px;
 }
+
 .btn {
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-.btn .detail button{
+.btn .detail button {
     width: 242px;
     padding: 6px;
     border-radius: 10px;
-    background: #A52800;
+    background: #0E0B85;
     color: #FFF;
     margin-right: 15px;
     cursor: pointer;
@@ -331,7 +341,7 @@ a {
 .btn .delete button {
     width: 100px;
     padding: 6px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #525252;
     color: #FFF;
     cursor: pointer;
@@ -354,7 +364,10 @@ a {
     background: #FFFCDE;
     font-size: 30px;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
     display: none;
     opacity: 0;
@@ -362,21 +375,14 @@ a {
     text-align: center;
 }
 
-#myModal #myModal__close {
-    width: 21px; height: 21px;
-    position: absolute;
-    font-size: 29px;
-    top: 1px; right: 11px;
-    cursor: pointer;
-    display: block;
-}
-
 #myOverlay {
     z-index: 37;
     position: fixed;
-    background: rgba(0,0,0,.7);
-    width: 100%; height: 100%;
-    top: 0; left: 0;
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     cursor: pointer;
     display: none;
 }
@@ -390,7 +396,7 @@ a {
     width: 130px;
     padding: 17px;
     border-radius: 10px;
-    background: #A52800;
+    background: #0E0B85;
     color: #FFF;
     margin-right: 15px;
     cursor: pointer;
@@ -398,7 +404,7 @@ a {
     border: none;
 }
 
-#myModal button:nth-child(2n){
+#myModal button:nth-child(2n) {
     background: #6b6b6b;
     margin-right: 0;
 }
@@ -408,14 +414,9 @@ a {
     justify-content: center;
 }
 
-.modal_btn {
-    display: flex;
-    justify-content: center;
-}
-
 
 .dropbtn {
-    background: #A52800;
+    background: #0E0B85;
     color: white;
     padding: 10px 0;
     font-size: 16px;
@@ -432,7 +433,7 @@ a {
 
 #myInput {
     box-sizing: border-box;
-    background-image: url('searchicon.png');
+    /*background-image: url('searchicon.png');*/
     background-position: 14px 12px;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -441,7 +442,9 @@ a {
     border-bottom: 1px solid #ddd;
 }
 
-#myInput:focus {outline: 3px solid #ddd;}
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
 
 .dropdown {
     position: relative;
@@ -465,15 +468,43 @@ a {
     display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+    background-color: #ddd;
+}
 
 .recover {
     margin-left: 250px;
 }
 
-.show {display: block;}
+.show {
+    display: block;
+}
 
 
 .dropdown .cards_item {
     background-color: #b4b4b4;
+}
+
+.logo-text {
+    font-family: "Ruslan Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 39px;
+    color: #656560;
+
+    margin-right: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-left: 50px;
+}
+
+.logo {
+    width: 50px;
+    height: 45px;
+    margin-right: 10px;
 }

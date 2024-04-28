@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF0DB;
+    background: ghostwhite;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +40,7 @@ a {
 
 
 .sidebar {
-    background-color: #FFF;
+    background: ghostwhite;
     width: 100%;
     margin-bottom: 40px;
 }
@@ -84,23 +84,25 @@ a {
 
 .left_menu {
     position: fixed;
-    background: #A52800;
+    background: #0E0B85;
     width: 320px;
     height: 100%;
     padding: 15px 0;
 }
 
+
+
 .left_menu_items h1, a{
     color: #fff;
 }
 
-.left_menu_items h1 {
-    font-size: 35px;
-    width: 235px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 90px;
-}
+/*.left_menu_items h1 {*/
+/*  font-size: 35px;*/
+/*  width: 235px;*/
+/*  margin: 0 auto;*/
+/*  text-align: center;*/
+/*  margin-bottom: 90px;*/
+/*}*/
 
 .list {
     display: block;
@@ -110,7 +112,6 @@ a {
 .list a {
     font-size: 20px;
     margin-left: 74px;
-    font-size: 800;
 }
 
 .list li {
@@ -284,12 +285,12 @@ a {
 
 .first .icon {
     font-size: 100px;
-    color: #A52800;
+    color: #0E0B85;
 }
 
 .first .text {
     font-size: 20px;
-    color: #A52800;
+    color: #0E0B85;
     font-weight: 500;
 }
 
@@ -300,7 +301,7 @@ a {
     top: 15px;
     font-size: 15px;
     cursor: pointer;
-    color: #A52800;
+    color: #0E0B85;
     display: none;
 }
 
@@ -309,7 +310,7 @@ a {
 }
 
 .first #cancel_btn:hover {
-    color:  #D33232;
+    color:  #0E0B85;
 }
 
 .first #file_name {
@@ -319,7 +320,7 @@ a {
     padding: 8px 0;
     width: 100%;
     font-size: 18px;
-    background: #A52800;
+    background: #0E0B85;
     display: none;
 }
 
@@ -337,7 +338,7 @@ a {
     height: 50px;
     display: block;
     border: none;
-    background-color: #D33232;
+    background: #0E0B85;
     color: #fff;
     border-radius: 8px;
     font-size: 16px;
@@ -354,7 +355,7 @@ a {
     height: 50px;
     display: block;
     border: none;
-    background-color: #D33232;
+    background: #0E0B85;
     color: #fff;
     border-radius: 8px;
     font-size: 16px;
@@ -421,7 +422,7 @@ label {
 
 input[type=submit] {
     width: 100%;
-    background-color: #D33232;
+    background: #0E0B85;
     color: white;
     padding: 10px 0;
     margin: 8px 0;
@@ -432,7 +433,7 @@ input[type=submit] {
 
 button {
     width: 100%;
-    background-color: #D33232;
+    background: #0E0B85;
     color: white;
     padding: 10px 0;
     margin: 8px 0;
@@ -448,4 +449,27 @@ form  {
 
 .image img {
     z-index: -1;
+}
+.logo-text {
+    font-family: "Ruslan Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 39px;
+    color: #656560;
+
+    margin-right: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-left: 50px;
+}
+
+.logo {
+    width: 50px;
+    height: 45px;
+    margin-right: 10px;
 }

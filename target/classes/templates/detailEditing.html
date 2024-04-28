@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="/css/detailEditing.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <!--  my fons-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <!--my fonts-->
+    <!--  <link rel="stylesheet" th:href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>-->
     <title>Details & Editing</title>
     <style>
         body{
@@ -178,13 +192,13 @@
             color: #fff;
         }
 
-        .left_menu_items h1 {
-            font-size: 35px;
-            width: 235px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 90px;
-        }
+        /*.left_menu_items h1 {*/
+        /*    font-size: 35px;*/
+        /*    width: 235px;*/
+        /*    margin: 0 auto;*/
+        /*    text-align: center;*/
+        /*    margin-bottom: 90px;*/
+        /*}*/
 
         .list {
             display: block;
@@ -577,13 +591,41 @@
             border-radius: 8px;
         }
 
+        .logo-text {
+            font-family: "Ruslan Display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+            line-height: 39px;
+            color: #656560;
+
+            margin-right: 124px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 90px;
+            align-content: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 45px;
+            margin-right: 10px;
+        }
+
 
     </style>
 </head>
 <body>
 <section class="left_menu">
     <div class="left_menu_items">
-        <h1>Happy Clients</h1>
+<!--        <h1>Happy Clients</h1>-->
+        <div class="logo-container">
+            <img src="../static/img/logo.png" alt="logo" class="logo">
+            <h1 class="logo-text">Happy Clients</h1>
+        </div>
         <ul class="list">
             <li class="dash">
                 <a th:href="@{'/admin/main/'}">Dashboard</a>
