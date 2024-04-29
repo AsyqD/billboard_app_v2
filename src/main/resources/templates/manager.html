@@ -34,17 +34,17 @@
 <body>
 <header class="root-header">
     <div class="logo-container">
-        <img src="../static/img/logo.png" alt="logo" class="logo">
+        <img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo" class="logo">
         <!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
 
         <span class="logo-text">
-            Happy <br/> Client
+            Happy <br/> Clients
     </span>
     </div>
     <nav class="nav-links">
         <ul>
-            <li class="dash">
-                <a th:href="@{'/admin/main/'}">Dashboard</a>
+            <li class="dash" >
+                <a th:href="@{'/admin/main/'}" style="text-decoration: underline;">Dashboard</a>
             </li>
             <li class="custom">
                 <a th:href="@{'/admin/incomingOrders/'}">Orders</a>

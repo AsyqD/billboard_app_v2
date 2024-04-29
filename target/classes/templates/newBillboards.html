@@ -34,11 +34,11 @@
 <body>
 <header class="root-header">
   <div class="logo-container">
-    <img src="../static/img/logo.png" alt="logo" class="logo">
+    <img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo" class="logo">
     <!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
 
     <span class="logo-text">
-            Happy <br/> Client
+            Happy <br/> Clients
     </span>
   </div>
   <nav class="nav-links">
@@ -52,8 +52,8 @@
       <li class="bilbo">
         <a th:href="@{'/admin/allBillboards/'}">All Billboards</a>
       </li>
-      <li class="new_bilbo">
-        <a th:href="@{'/admin/addNewBillboard/'}" >Post New</a>
+      <li class="new_bilbo" >
+        <a th:href="@{'/admin/addNewBillboard/'}" style="text-decoration: underline;">Post New</a>
       </li>
     </ul>
   </nav>

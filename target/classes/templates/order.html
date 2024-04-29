@@ -30,11 +30,11 @@
 <body>
 <header class="root-header">
     <div class="logo-container">
-        <img src="../static/img/logo.png" alt="logo" class="logo">
+        <img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo" class="logo">
         <!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
 
         <span class="logo-text">
-            Happy <br/> Client
+            Happy <br/> Clients
     </span>
     </div>
     <nav class="nav-links">
@@ -43,7 +43,7 @@
                 <a th:href="@{'/admin/main/'}">Dashboard</a>
             </li>
             <li class="custom">
-                <a th:href="@{'/admin/incomingOrders/'}">Orders</a>
+                <a th:href="@{'/admin/incomingOrders/'}"    style="text-decoration: underline;">Orders</a>
             </li>
             <li class="bilbo">
                 <a th:href="@{'/admin/allBillboards/'}">All Billboards</a>

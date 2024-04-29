@@ -168,76 +168,11 @@ a {
     display: block;
 }
 
-.left_menu {
-    position: fixed;
-    background: #0E0B85;
-    width: 320px;
-    height: 100%;
-    padding: 15px 0;
-}
-
-.left_menu_items h1, a {
-    color: #fff;
-}
-
-/*.left_menu_items h1 {*/
-/*  font-family: "Ruslan Display", sans-serif;*/
-/*  font-size: 35px;*/
-/*  width: 235px;*/
-/*  margin: 0 auto;*/
-/*  text-align: center;*/
-/*  margin-bottom: 90px;*/
-/*}*/
-
-
-
-/*.list {*/
-/*    display: block;*/
-/*    text-align: left;*/
-/*}*/
-
-/*.list a {*/
-/*    font-size: 20px;*/
-/*    margin-left: 74px;*/
-/*}*/
-
-/*.list li {*/
-/*    margin-bottom: 30px;*/
-/*}*/
-
-/*.list ul {*/
-/*    padding-left: 20px;*/
-/*}*/
-
-.list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.list li{
-    display: inline;
-    margin-right: 56px;
-    width: 216px;
-    height: 85px;
-    top: 76px;
-    left: 969px;
-}
-
-.list a {
-    text-decoration: none;
-    color: #070000;
-    font-family: Jost;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 35px;
-    letter-spacing: 0em;
-    text-align: left;
-}
 
 .bilbo_cards {
     margin-left: 250px;
 }
+
 
 .cards_item {
     display: flex;
@@ -351,7 +286,7 @@ a {
     width: 242px;
     padding: 6px;
     border-radius: 10px;
-    background: #0E0B85;
+    background: red;
     color: #FFF;
     margin-right: 15px;
     cursor: pointer;
@@ -415,7 +350,7 @@ a {
     width: 130px;
     padding: 17px;
     border-radius: 10px;
-    background: #0E0B85;
+    background: red;
     color: #FFF;
     margin-right: 15px;
     cursor: pointer;
@@ -435,7 +370,7 @@ a {
 
 
 .dropbtn {
-    background: #0E0B85;
+    background: red;
     color: white;
     padding: 10px 0;
     font-size: 16px;

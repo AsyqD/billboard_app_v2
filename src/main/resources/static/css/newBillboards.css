@@ -355,7 +355,7 @@ a {
     height: 50px;
     display: block;
     border: none;
-    background: #0E0B85;
+    background: red;
     color: #fff;
     border-radius: 8px;
     font-size: 16px;
@@ -365,6 +365,10 @@ a {
     outline: none;
 }
 
+.edit_img #custom-btn:hover {
+    background-color: #b30000; /* Darker shade of red */
+}
+
 
 .edit_img #upd_btn {
     margin-top: 10px;
@@ -372,7 +376,7 @@ a {
     height: 50px;
     display: block;
     border: none;
-    background: #0E0B85;
+    background: red;
     color: #fff;
     border-radius: 8px;
     font-size: 16px;
@@ -440,7 +444,7 @@ label {
 
 input[type=submit] {
     width: 100%;
-    background: #0E0B85;
+    background: white;
     color: white;
     padding: 10px 0;
     margin: 8px 0;
@@ -451,13 +455,17 @@ input[type=submit] {
 
 button {
     width: 100%;
-    background: #0E0B85;
+    background: red;
     color: white;
     padding: 10px 0;
     margin: 8px 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #b30000; /* Darker shade of red */
 }
 
 

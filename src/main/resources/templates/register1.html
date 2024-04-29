@@ -5,6 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--  my fons-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <!--my fonts-->
     <style>
         body {
             font-family: 'Ubuntu', sans-serif;
@@ -124,8 +137,8 @@
         button {
             border:none;
             border-radius: 10px;
-            background-color: #0E0B85;
-            width: 200px;
+            background-color: red;
+            width: 80%;
             padding: 15px 0;
             font-size: 16px;
             font-weight: bold;
@@ -133,6 +146,9 @@
             color: #fff;
             display: block;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #b30000; /* Darker shade of red */
         }
 
         .add-info a{
@@ -144,8 +160,13 @@
 
 
         .add-info span {
-            color: #0E0B85;
+            color: red;
             text-decoration: none;
+        }
+
+        .add-info span:hover{
+            text-decoration: underline;
+            color: #666666;
         }
 
         /* .inputs {
@@ -198,6 +219,10 @@
             position: relative;
             left: -35px;
         }
+        .text-signup {
+            font-family: "Ruslan Display", sans-serif;
+            color: black;
+        }
     </style>
     <title>Registration</title>
 </head>
@@ -206,7 +231,7 @@
     <div class="logIn_items">
         <img src="../static/img/logIn_banner.png" alt="">
         <div class="logIn_text">
-            <h1><span>Happy</span> Clients!</h1>
+            <h1 class="text-signup">Sign Up</h1>
             <form th:action="@{'/auth/register'}" method="post">
                 <div class="inputs">
                     <div class="info">
