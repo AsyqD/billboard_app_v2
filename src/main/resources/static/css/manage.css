@@ -35,7 +35,9 @@ a {
 
 .container {
     width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
@@ -161,13 +163,13 @@ a {
     display: block;
 }
 
-.left_menu {
-    position: fixed;
-    background: #0E0B85;
-    width: 320px;
-    height: 100%;
-    padding: 15px 0;
-}
+/*.left_menu {*/
+/*    position: fixed;*/
+/*    background: #0E0B85;*/
+/*    width: 320px;*/
+/*    height: 100%;*/
+/*    padding: 15px 0;*/
+/*}*/
 
 .left_menu_items h1, a{
     color: #fff;
@@ -181,16 +183,16 @@ a {
 /*    margin-bottom: 90px;*/
 /*}*/
 
-.list {
-    display: block;
-    text-align: left;
-}
+/*.list {*/
+/*    display: block;*/
+/*    text-align: left;*/
+/*}*/
 
-.list a {
-    font-size: 20px;
-    margin-left: 74px;
-    /*font-size: 800;*/
-}
+/*.list a {*/
+/*    font-size: 20px;*/
+/*    margin-left: 74px;*/
+/*    !*font-size: 800;*!*/
+/*}*/
 
 .list li {
     margin-bottom: 30px;
@@ -200,23 +202,21 @@ a {
     padding-left: 20px;
 }
 
-.dash {
-    background: #FFF;
-    padding: 20px 0;
-    border-radius: 30px 0px 0px 30px;
-    margin-left: 12px;
-    width: 308px;
-}
+/*.dash {*/
+/*    background: #FFF;*/
+/*    padding: 20px 0;*/
+/*    border-radius: 30px 0px 0px 30px;*/
+/*    !*margin-left: 12px;*!*/
+/*    width: 308px;*/
+/*}*/
 
 
-.dash a {
-    color: #A52800;
-    margin-left: 60px;
-}
+
 
 
 .cards_info {
-    padding: 30px 0;
+    /*padding: 30px 0;*/
+    margin-top: 20vh;
 }
 
 .cards_items {
@@ -387,27 +387,4 @@ td span {
     font-weight: 800;
     border-radius: 10px;
     cursor: pointer;
-}
-.logo-text {
-    font-family: "Ruslan Display", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 36px;
-    line-height: 39px;
-    color: #656560;
-
-    margin-right: auto;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 90px;
-    padding-left: 50px;
-}
-
-.logo {
-    width: 50px;
-    height: 45px;
-    margin-right: 10px;
 }

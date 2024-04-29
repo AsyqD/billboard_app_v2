@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="/js/main.js"></script>
-    <link rel="stylesheet" href="../static/css/manage.css">
+    <link rel="stylesheet" href="../static/css/manage.css"/>
     <link rel="stylesheet" th:href="@{/css/manage.css}" />
+
+    <link rel="stylesheet" href="../static/css/header.css"/>
+    <link rel="stylesheet" th:href="@{/css/header.css}" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
@@ -29,65 +32,65 @@
     <title>Admin Page</title>
 </head>
 <body>
-<section class="left_menu">
-    <div class="left_menu_items">
-        <div class="logo-container">
-            <img src="../static/img/logo.png" alt="logo" class="logo">
-<!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
+<header class="root-header">
+    <div class="logo-container">
+        <img src="../static/img/logo.png" alt="logo" class="logo">
+        <!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
 
-            <h1 class="logo-text">Happy Clients</h1>
-        </div>
-        <ul class="list">
+        <span class="logo-text">
+            Happy <br/> Client
+    </span>
+    </div>
+    <nav class="nav-links">
+        <ul>
             <li class="dash">
                 <a th:href="@{'/admin/main/'}">Dashboard</a>
             </li>
             <li class="custom">
-                <a th:href="@{'/admin/incomingOrders/'}">Incoming Orders</a>
+                <a th:href="@{'/admin/incomingOrders/'}">Orders</a>
             </li>
             <li class="bilbo">
                 <a th:href="@{'/admin/allBillboards/'}">All Billboards</a>
             </li>
             <li class="new_bilbo">
-                <a th:href="@{'/admin/addNewBillboard/'}" >Post New Billboard</a>
+                <a th:href="@{'/admin/addNewBillboard/'}" >Post New</a>
             </li>
         </ul>
-    </div>
-</section>
-<header class="sidebar">
-    <div class="container">
-        <div class="sidebar_items">
-            <div class="enter">
-                <img  style="height: 30px" src="https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=1380&t=st=1710492001~exp=1710492601~hmac=2facf8b6dd9ab55929f1b98082e457f4d117dc80deae716d47b81ed83ade7693" class="user-pic" onclick="toggleMenu()">
-            </div>
-            <div class="name">
-                <p th:text="${#authentication.getPrincipal().name} + ' ' + ${#authentication.getPrincipal().surname}"></p>
-                <p>Super Admin</p>
-            </div>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="uer-info">
-                        <img  style="height: 30px" src="https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=1380&t=st=1710492001~exp=1710492601~hmac=2facf8b6dd9ab55929f1b98082e457f4d117dc80deae716d47b81ed83ade7693" class="img2">
-                        <h3 th:text="${#authentication.getPrincipal().name} + ' ' + ${#authentication.getPrincipal().surname}"></h3>
-                    </div>
-                    <hr>
-                    <a th:href="@{'/mainPage/'}" class="sub-menu-link" sec:authorize="hasAuthority('MANAGER')">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Home Page</p>
-                        <span>></span>
-                    </a>
-                    <a th:href="@{'/editOrViewProfile/'}" class="sub-menu-link">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <p>Edit profile</p>
-                        <span>></span>
-                    </a>
-                    <a class="sub-menu-link" href="JavaScript:void(0)"
-                       onclick="singOutForm.submit()">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <p>Log out</p>
-                        <form th:action="@{'/signOut'}" method="post" id="singOutForm"></form>
-                        <span>></span>
-                    </a>
+    </nav>
+    <div class="enter">
+        <img style="height: 40px"
+             src="https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=1380&t=st=1710492001~exp=1710492601~hmac=2facf8b6dd9ab55929f1b98082e457f4d117dc80deae716d47b81ed83ade7693"
+             class="user-pic" onclick="toggleMenu()">
+        <div class="name">
+            <p th:text="${#authentication.getPrincipal().name} + ' ' + ${#authentication.getPrincipal().surname}"></p>
+            <p>Super Admin</p>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="uer-info">
+                    <img style="height: 40px"
+                         src="https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=1380&t=st=1710492001~exp=1710492601~hmac=2facf8b6dd9ab55929f1b98082e457f4d117dc80deae716d47b81ed83ade7693"
+                         class="img2">
+                    <h3 th:text="${#authentication.getPrincipal().name} + ' ' + ${#authentication.getPrincipal().surname}"></h3>
                 </div>
+                <hr>
+                <a th:href="@{'/mainPage/'}" class="sub-menu-link" sec:authorize="hasAuthority('MANAGER')">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Home Page</p>
+                    <span>></span>
+                </a>
+                <a th:href="@{'/editOrViewProfile/'}" class="sub-menu-link">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <p>Edit profile</p>
+                    <span>></span>
+                </a>
+                <a class="sub-menu-link" href="JavaScript:void(0)"
+                   onclick="singOutForm.submit()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Log out</p>
+                    <form th:action="@{'/signOut'}" method="post" id="singOutForm"></form>
+                    <span>></span>
+                </a>
             </div>
         </div>
     </div>

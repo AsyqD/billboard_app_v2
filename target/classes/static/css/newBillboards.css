@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ a {
 
 .container {
     width: 1200px;
-    margin: 0 auto;
+    margin-top: 20vh;
 }
 
 
@@ -44,6 +44,8 @@ a {
     width: 100%;
     margin-bottom: 40px;
 }
+
+
 
 .sidebar_items {
     padding: 20px 0;
@@ -78,19 +80,22 @@ a {
 .enter img {
     margin-right: 10px;
 }
+
 .name {
     display: block;
 }
 
 .left_menu {
     position: fixed;
+    display: flex;
     background: #0E0B85;
     width: 320px;
     height: 100%;
     padding: 15px 0;
 }
 
-.left_menu_items h1, a{
+
+.left_menu_items h1, a {
     color: #fff;
 }
 
@@ -102,36 +107,50 @@ a {
 /*  margin-bottom: 90px;*/
 /*}*/
 
-.list {
-    display: block;
-    text-align: left;
+/*.list {*/
+/*    display: block;*/
+/*    text-align: left;*/
+/*}*/
+
+/*.list a {*/
+/*    font-size: 20px;*/
+/*    margin-left: 74px;*/
+/*}*/
+
+/*.list li {*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.list ul {*/
+/*    padding-left: 20px;*/
+/*}*/
+
+.list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list li{
+    display: inline;
+    margin-right: 56px;
+    width: 216px;
+    height: 85px;
+    top: 76px;
+    left: 969px;
 }
 
 .list a {
-    font-size: 20px;
-    margin-left: 74px;
+    text-decoration: none;
+    color: #070000;
+    font-family: Jost;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
-.list li {
-    margin-bottom: 30px;
-}
-
-.list ul {
-    padding-left: 20px;
-}
-
-.new_bilbo {
-    background: #FFF;
-    padding: 20px 0;
-    border-radius: 30px 0px 0px 30px;
-    margin-left: 12px;
-    width: 308px;
-}
-
-.new_bilbo a {
-    color: #A52800;
-    margin-left: 60px;
-}
 
 
 .all_edit {
@@ -215,7 +234,7 @@ a {
 
 }
 
-.sub-menu-link:hover span{
+.sub-menu-link:hover span {
     transform: translateX(5px);
 }
 
@@ -293,7 +312,7 @@ a {
 }
 
 
-.first  #cancel_btn {
+.first #cancel_btn {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -308,7 +327,7 @@ a {
 }
 
 .first #cancel_btn:hover {
-    color:  #0E0B85;
+    color: #0E0B85;
 }
 
 .first #file_name {
@@ -322,7 +341,7 @@ a {
     display: none;
 }
 
-.first.active:hover #file_name{
+.first.active:hover #file_name {
     display: block;
 }
 
@@ -371,10 +390,11 @@ a {
     width: 140px;
 }
 
-.map{
+.map {
     width: 361px;
     border-radius: 0 0 8px 8px;
 }
+
 .few_items img {
     margin-bottom: 10px;
 }
@@ -441,33 +461,10 @@ button {
 }
 
 
-form  {
+form {
     border: #000;
 }
 
 .image img {
     z-index: -1;
-}
-.logo-text {
-    font-family: "Ruslan Display", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 36px;
-    line-height: 39px;
-    color: #656560;
-
-    margin-right: auto;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 90px;
-    padding-left: 50px;
-}
-
-.logo {
-    width: 50px;
-    height: 45px;
-    margin-right: 10px;
 }
