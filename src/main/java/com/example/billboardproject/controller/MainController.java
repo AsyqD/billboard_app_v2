@@ -46,7 +46,9 @@ public class MainController {
         model.addAttribute("billboards", billboardService.getAllActiveBillboards());
         model.addAttribute("cities", cityService.getAllCities());
         model.addAttribute("locations", locationService.getAllLocations());
+
         if (user.getRole() == Role.MANAGER) return "redirect:/admin/main";
+
         return "main2";
     }
     @PreAuthorize("isAuthenticated()")
@@ -65,6 +67,8 @@ public class MainController {
                                       @PathVariable(name = "billboard_id") Long id) {
         DateFormat dateFormat = new SimpleDateFormat("MM");
         String dateString = dateFormat.format(new Date());
+
+        System.out.println(billboardService.getBillboardById(id).getType());
 
         int currentMonth = Integer.parseInt(dateString);
         Billboard billboard = billboardService.getBillboardById(id);
@@ -107,6 +111,9 @@ public class MainController {
 
         model.addAttribute("billboardOrders", billboardOrders);
         model.addAttribute("billboard", billboard);
+
+        System.out.println(billboard.getType());
+        System.out.println(billboard.getSize());
         model.addAttribute("orderedMonths", orderedMonths);
         model.addAttribute("currentMonth", currentMonth);
         model.addAttribute("cities", cityService.getAllCities());

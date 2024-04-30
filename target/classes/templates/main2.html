@@ -820,8 +820,8 @@
         </div>
         <div class="banner_detail">
           <div class="banner_textD">
-            <h3 th:text="${locations[billboard.location_id].name}"></h3>
-            <p th:text="'City: '+ ${cities[billboard.city_id].name}"></p>
+            <h3 th:text="${locations[billboard.location_id - 1].name}"></h3>
+            <p th:text="'City: '+ ${cities[billboard.city_id - 1].name}"></p>
             <p th:text="'Type: '+ ${billboard.type}"></p>
             <p th:text="'Size: '+ ${billboard.size}"></p>
           </div>
@@ -831,6 +831,13 @@
         </div>
       </div>
     </div>
+<!--    <div class="cards">-->
+<!--      <div class="cards_item" th:each="billboard : ${billboards}">-->
+<!--        <div>-->
+<!--          <p th:text="${billboard.size}"></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </section>
 <section class="about_com" id="about_com">
