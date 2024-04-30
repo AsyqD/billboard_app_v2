@@ -1,8 +1,40 @@
 body{
+    background-color: #F3F6FF;
+}
+
+
+
+
+.billboard-card img {
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    border-radius: 2%;
+}
+
+
+.billboard-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.billboard-info p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.billboard-info span {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+
+body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 250, 233, 1);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,17 +65,37 @@ a {
 }
 
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 .sidebar {
-    background-color: #FFF;
+    /* background-color: rgba(255, 250, 233, 1); */
+
     position: fixed;
     width: 100%;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    /* margin: 40px 20px; */
+    /* padding: 30px 10px; */
+    margin-top: 30px;
     z-index: 1;
+}
+
+.sidebar_items {
+    /* width: 95%; */
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 100px;
+    border-radius: 20px;
+}
+
+.sidebar_items h2{
+    /*margin-right: 70px;*/
+    color: #000;
+    width: 290px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sidebar_items h2 span {
+    color: #4D49FF;
 }
 
 .sidebar_nav {
@@ -51,6 +103,13 @@ a {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    text-align: center;
+}
+
+.homePage{
+    display: flex;
+    margin-top: 10px;
+    margin-right: 3rem;
 }
 
 .enter {
@@ -65,8 +124,8 @@ a {
 
 .sub-menu {
     background: #fff;
-    padding: 20px;
-    margin: 10px;
+    padding: 20px 0 20px 20px;
+    margin: 10px 0 10px 10px;
 }
 
 .uer-info {
@@ -96,7 +155,7 @@ a {
 .sub-menu-wrap {
     position: absolute;
     top: 85%;
-    right: 10%;
+    right: 0;
     width: 260px;
     max-height: 0;
     overflow: hidden;
@@ -149,32 +208,18 @@ a {
     margin-right: 35px;
     font-weight: 600;
     font-size: 18px;
+    text-align: center;
 }
 
 .nav li a {
     color: #000;
+    margin-left: 100px;
 }
 
 .nav li:nth-child(4n) {
     margin-right: 0;
 }
 
-.sidebar_items {
-    display: flex;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.sidebar_items h2{
-    margin-right: 70px;
-    color: #000;
-    width: 290px;
-    font-size: 30px;
-}
-
-.sidebar_items h2 span {
-    color: #F4624B;
-}
 
 .shops {
     display: flex;
@@ -194,22 +239,20 @@ a {
     margin-left: 10px;
 }
 
-.header {
-    padding: 90px 0 20px;
-    background: url(../img/imgBackground.png) 0 0 no-repeat;
-    background-size: 100%;
+header {
+    /* padding: 90px 0 20px; */
+    /* background: url(../img/imgBackground.png) 0 0 no-repeat;
+    background-size: 100%; */
 }
 
-.text_banner {
-    padding: 144px 0 197px;
-}
+
 
 
 .text_banner button{
     width: 280px;
     padding: 20px;
     font-weight: bold;
-    background-color: #ed513a;
+    background-color: #4D49FF;
     border: none;
     font-weight: bold;
     color: #fff;
@@ -225,6 +268,7 @@ a {
 }
 .items {
     padding: 40px 20px;
+    /* margin-top: 40vh; */
 }
 
 .items h1 {
@@ -233,8 +277,11 @@ a {
 }
 
 .cards {
-    display: block  ;
+    display: flex;
+    flex-direction: row; /* or column for vertical layout */
+    flex-wrap: wrap;
     position: relative;
+    justify-content: center;
 }
 
 
@@ -244,16 +291,6 @@ a {
 
 .cards .slick-list {
     overflow: hidden;
-}
-
-.slick-arrow {
-    position: absolute;
-    margin: -25px 0 0 0;
-    top: 20%;
-    font-size: 0;
-    width: 40px;
-    height: 50px;
-    border: none;
 }
 
 .cards .slick-dots {
@@ -274,13 +311,13 @@ a {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #f59a8c;
+    background-color: #4D49FF;
     cursor: pointer;
     border: none;
 }
 
 .slick-dots .slick-active button {
-    background-color: #ed513a;
+    background-color: #0E0B85;
     width: 17px;
     height: 17px;
 }
@@ -297,7 +334,7 @@ a {
 }
 
 .cards .slick-center {
-    background-color: #ed513a;
+    background-color:  #0E0B85;
     transform: scale(1);
     transition: 1s ease;
 }
@@ -368,10 +405,6 @@ a {
     font-size: 20px
 }
 
-/* .banner_btn {
-    text-align: end;
-} */
-
 .banner_btn {
     width: 130px;
     margin: 0 auto 0 170px;
@@ -389,20 +422,15 @@ a {
 }
 
 .banner_btn a:hover{
-    background: #F4624B;
+    background: #0E0B85;
     color: #fff;
     transition: 0.6s ease;
-}
-
-
-.more_bilboards {
-    text-align: center;
 }
 
 .more_bilboards a {
     display: block;
     color: #fff;
-    background: #F4624B;
+    background: #0E0B85;
     width: 170px;
     text-align: center;
     padding: 13px 0;
@@ -413,13 +441,20 @@ a {
 }
 
 .about_com {
-    padding: 60px 20px 100px;
-    background: #f26e5a;
+    /* padding: 60px 20px 100px; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .about_items {
     display: flex;
-    justify-content: center;
+    height: 85vh;
+    margin-top: 15vh;
+    padding: 60px 10%;
+    border-radius: 0;
+    background: #f08557;
 }
 
 
@@ -455,9 +490,17 @@ a {
     border-radius: 5px;
 }
 
+.grid_img  img:nth-child(1){
+    max-width: 260px;
+    height: 320px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 5px;
+}
+
 .grid_img > div {
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    /* align-items: center; */
 }
 
 .grid > div > img {
@@ -468,16 +511,26 @@ a {
 }
 
 .grid_img {
-    display: grid;
-    grid-gap: 10px;
+    /* display: grid; */
+    /* grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
     grid-auto-rows: 100px;
     grid-auto-flow: dense;
-    margin-left: 20px;
+    margin-left: 20px; */
+    display: flex;
+    gap: 10px;
+    /* height: 100px; */
 }
 
 .group1_grid img {
     margin-bottom: 10px;
+}
+.group1_grid img:nth-child(1) {
+    height: 110px;
+}
+.group1_grid img:nth-child(2) {
+    height: 200px;
+    width: 165px;
 }
 
 .group1_grid img:nth-child(2n) {
@@ -486,7 +539,10 @@ a {
 
 
 .phone_section {
-    padding: 80px 0 60px;
+    /* padding: 80px 0 60px; */
+    padding-top: 80px;
+    padding-bottom: 60px;
+    width: 100%;
 }
 
 .contact_us {
@@ -494,7 +550,7 @@ a {
     width: 431px;
     padding: 40px 30px;
     border-radius: 10px;
-    border: 2px solid #ed513a;
+    border: 2px solid #0E0B85;
     margin-right: 40px;
 }
 
@@ -548,9 +604,8 @@ textarea {
     text-align: center;
 }
 
-
 .btn button{
-    background: #ed513a;
+    background: red;
     width: 200px;
     padding: 13px 0;
     border-radius: 8px;
@@ -558,6 +613,10 @@ textarea {
     font-weight: bold;
     font-size: 18px;
     color: #FFF;
+}
+
+.container{
+    width: 100%;
 }
 
 .contact_us hr {
@@ -568,12 +627,13 @@ textarea {
 
 .phone_details {
     display: flex;
-    width: 87%;
+    justify-content: center;
+    /* width: 87%; */
     margin: 0 auto;
 }
 
 .contact_us hr {
-    color: #ed513a;
+    color: #0E0B85;
 }
 
 .geo {
@@ -582,7 +642,7 @@ textarea {
     display: flex;
     align-items: center;
     border-radius: 8px;
-    border: 2px solid #ed513a;
+    border: 2px solid #0E0B85;
     justify-content: space-between;
     padding: 10px 30px;
     margin: 0px 0 22px 0;
@@ -606,7 +666,7 @@ textarea {
 }
 
 .geo h2 span {
-    color: #ed513a;
+    color:#0E0B85;
 }
 
 .geo img {
@@ -642,16 +702,6 @@ textarea {
     border-radius: 8px;
 }
 
-.footer {
-    padding: 40px 0 20px;
-    background-color: #7B2E1C;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
 
 .social a {
     display: block;
@@ -662,14 +712,6 @@ textarea {
     margin-right: 0;
 }
 
-.footer_words {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 20px;
-}
 
 .footer_words hr {
     width: 16%;
@@ -678,18 +720,9 @@ textarea {
     border: none;
 }
 
-.copyright {
-    text-align: center;
-    color: #fff;
-    font-weight: 100;
+
+
+h1.all_Billboards {
+    text-align: left !important;
+    margin-left: 10px;
 }
-
-
-
-
-
-
-
-
-
-

@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 250, 233, 1);
+    background-color: #F3F6FF;
     position: relative;
 }
 
@@ -60,7 +60,7 @@ a {
 }
 
 .nav h1 {
-    color: #AC2F07;
+    color: #0E0B85;
     width: 10%;
     text-align: center;
 }
@@ -748,7 +748,7 @@ box-shadow: 0px 0px 3px gray;
     margin-bottom: 10px;
 }
 .blue button {
-    background: #1d9243;
+    background: green;
 }
 
 .red {
