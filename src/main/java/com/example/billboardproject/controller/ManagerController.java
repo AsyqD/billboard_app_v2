@@ -66,7 +66,9 @@ public class ManagerController {
     @PreAuthorize("hasAnyAuthority('MANAGER')")
     @GetMapping(value = "/incomingOrders")
     public String incomingOrdersPage(Model model) {
-        model.addAttribute("billboards", billboardService.getAllActiveBillboards());
+        List<Billboard> billboards = billboardService.getAllActiveBillboards();
+        Collections.reverse(billboards);
+        model.addAttribute("billboards", billboards);
         model.addAttribute("orders", orderService.getAllOrders());
         model.addAttribute("cities", cityService.getAllCities());
         model.addAttribute("locations", locationService.getAllLocations());
