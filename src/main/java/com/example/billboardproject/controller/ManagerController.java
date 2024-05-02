@@ -68,8 +68,10 @@ public class ManagerController {
     public String incomingOrdersPage(Model model) {
         List<Billboard> billboards = billboardService.getAllActiveBillboards();
         Collections.reverse(billboards);
+        List<Order> orders = orderService.getAllOrders();
+        Collections.reverse(orders);
         model.addAttribute("billboards", billboards);
-        model.addAttribute("orders", orderService.getAllOrders());
+        model.addAttribute("orders", orders);
         model.addAttribute("cities", cityService.getAllCities());
         model.addAttribute("locations", locationService.getAllLocations());
         return "order";

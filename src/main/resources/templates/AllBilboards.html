@@ -99,7 +99,7 @@
         <div class="bilbo_cards">
             <div class="cards_item" th:each="billboard : ${billboards}">
                 <div class="image">
-                    <img th:src="@{'/admin/getAva/' + ${billboard.billboard_url}}" id="addImg" alt="">
+                    <img th:src="@{'/admin/getAva/' + ${billboard.billboard_url}}" src="../static/img/new.png" id="addImg" alt="">
                 </div>
                 <div class="text">
                     <div class="text_item">
@@ -277,7 +277,5 @@
 </script>
 
 <script th:src="@{'js/bootstrap.bundle.js'}" type="text/javascript"></script>
-<!--<script type="text/javascript" th:src="@{'/js/jquery-3.6.0.min.js'}"></script>-->
-
 </body>
 </html>

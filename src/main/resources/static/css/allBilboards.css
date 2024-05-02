@@ -33,12 +33,6 @@ a {
 }
 
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    /*margin-top: 20vh;*/
-}
-
 .bilbo_info{
     margin-top: 20vh;
 }
@@ -170,7 +164,9 @@ a {
 
 
 .bilbo_cards {
-    margin-left: 250px;
+    display: grid;
+    gap: 20px;
+    margin: 50px;
 }
 
 
@@ -178,7 +174,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: auto;
     background-color: #FFF;
     padding: 20px;
     margin-bottom: 20px;

@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/order.css">
-    <link rel="stylesheet" th:href="@{/css/order.css}" />
+    <link rel="stylesheet" th:href="@{/css/order.css}"/>
 
     <link rel="stylesheet" href="../static/css/header.css"/>
-    <link rel="stylesheet" th:href="@{/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/css/header.css}"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
     <title>Order Page</title>
     <!--  my fons-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,8 +30,6 @@
 <header class="root-header">
     <div class="logo-container">
         <img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo" class="logo">
-        <!--            <img th:src="@{/img/logo.png}" alt="logo" class="logo">-->
-
         <span class="logo-text">
             Happy <br/> Clients
     </span>
@@ -43,13 +40,13 @@
                 <a th:href="@{'/admin/main/'}">Dashboard</a>
             </li>
             <li class="custom">
-                <a th:href="@{'/admin/incomingOrders/'}"    style="text-decoration: underline;">Orders</a>
+                <a th:href="@{'/admin/incomingOrders/'}" style="text-decoration: underline;">Orders</a>
             </li>
             <li class="bilbo">
                 <a th:href="@{'/admin/allBillboards/'}">All Billboards</a>
             </li>
             <li class="new_bilbo">
-                <a th:href="@{'/admin/addNewBillboard/'}" >Post New</a>
+                <a th:href="@{'/admin/addNewBillboard/'}">Post New</a>
             </li>
         </ul>
     </nav>
@@ -93,130 +90,64 @@
 </header>
 <section class="orders">
     <div class="container">
-        <div class="order_items" th:each="billboard : ${billboards}">
-            <table class="main_table">
-                <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Description of the billboard</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td th:text="${billboard.id}"></td>
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Billboard</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Decision</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="order : ${orders}">
+                <th:block th:each="billboard : ${billboards}"
+                          th:if="${billboard.id==order.billboard.id}">
+                    <td th:text="${order.id}"></td>
+                    <td th:text="${order.user.surname} + ' ' + ${order.user.name}"></td>
+                    <td th:text="${order.telNumber}"></td>
+                    <td th:text="${order.startDate}"></td>
+                    <td th:text="${order.endDate}"></td>
                     <td>
-                        <div class="cards_item">
-                            <div class="image">
-                                <img th:src="@{'/admin/getAva/' + ${billboard.billboard_url}}" alt="">
-                            </div>
-                            <div class="text">
-                                <div class="text_item">
-                                    <h3>City:</h3>
-                                    <p th:text="${cities[billboard.city_id - 1].name}"></p>
-                                </div>
-                                <div class="text_item">
-                                    <h3>Location:</h3>
-                                    <p th:text="${locations[billboard.location_id - 1].name}"></p>
-                                </div>
-                                <div class="text_item">
-                                    <h3>Type:</h3>
-                                    <p th:text="${billboard.type}"></p>
-                                </div>
-                                <div class="text_item">
-                                    <h3>Size:</h3>
-                                    <p th:text="${billboard.size}"></p>
-                                </div>
-                                <div class="text_item">
-                                    <h3>Price:</h3>
-                                    <p th:text="${billboard.price} + '$(per month)'"></p>
-                                </div>
-                                <div class="text_item">
-                                    <h3>Lighting:</h3>
-                                    <p th:text="${billboard.isHasLightning}?'Available':'Not Available'"></p>
-                                </div>
-                            </div>
+                        <a th:href="@{'/admin/detailEditBillboard/' + ${billboard.id}}"
+                           th:text="${'billboard ' + billboard.id}"
+                           style="text-decoration: underline; color: red; font-style: italic;"
+                        ></a>
+                    </td>
+                    <td th:text="${billboard.type}"></td>
+                    <td th:text="${billboard.size}"></td>
+                    <td th:text="${billboard.price} + '$'"></td>
+                    <td th:switch="${order.status}">
+                        <span th:case="0" style="color: #0024A2">Waiting</span>
+                        <span th:case="1" style="color: #1a8a12">Accepted</span>
+                        <span th:case="2" style="color: red">Rejected</span>
+                    </td>
+                    <td>
+                        <div class="btns">
+                            <form th:action="@{'/admin/changeStatus'}" method="post">
+                                <input type="hidden" name="orderId" th:value="${order.id}">
+                                <button type="submit" class="approve" th:hidden="${order.status == 1}">✓</button>
+                            </form>
+                            <form th:action="@{'/admin/refuseOrder'}" method="post">
+                                <input type="hidden" name="refuseOrderId" th:value="${order.id}">
+                                <button class="reject" th:hidden="${order.status == 2}">X</button>
+                            </form>
                         </div>
                     </td>
-                </tr>
-                </tbody>
-                <thead class="description">
-                <tr>
-                    <th></th>
-                    <th>Customers who have applied for this billboard</th>
-                </tr>
-                </thead>
-            </table>
-            <table class="sheet">
-                <div class="card_info">
-                    <thead>
-                    <tr>
-                        <th>№</th>
-                        <th>Client Name</th>
-                        <th>Last Name</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Phone Number</th>
-                        <th>Status</th>
-                        <th>Decision</th>
-                    </tr>
-                    </thead>
-                    <tbody th:each="order : ${orders}">
-                    <tr th:hidden="${order.billboard.id != billboard.id}">
-                        <td th:text="${order.id}"></td>
-                        <td th:text="${order.user.surname}"></td>
-                        <td th:text="${order.user.name}"></td>
-                        <td th:text="${order.startDate}"></td>
-                        <td th:text="${order.endDate}"></td>
-                        <td th:text="${order.telNumber}"></td>
-                        <td th:switch="${order.status}">
-                            <span th:case="0" style="color: #0024A2">Waiting</span>
-                            <span th:case="1" style="color: #1a8a12">Accepted</span>
-                            <span th:case="2" style="color: red">Rejected</span>
-                        </td>
-                        <td>
-                            <div class="btns">
-                                <form th:action="@{'/admin/changeStatus'}" method="post">
-                                    <input type="hidden" name="orderId" th:value="${order.id}">
-                                    <button type="submit" class="approve" th:hidden="${order.status == 1}">✓</button>
-                                </form>
-                                <form th:action="@{'/admin/refuseOrder'}" method="post">
-                                    <input type="hidden" name="refuseOrderId" th:value="${order.id}">
-                                    <button class="reject" th:hidden="${order.status == 2}">X</button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </div>
-            </table>
-        </div>
+                </th:block>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
-<!--<script>-->
-
-<!--    $('.reject').click(function (event) {-->
-<!--        event.preventDefault();-->
-<!--        $('#myOverlay').fadeIn(297, function () {-->
-<!--            $('#myModal')-->
-<!--                .css('display', 'block')-->
-<!--                .animate({opacity: 1}, 198);-->
-<!--        });-->
-<!--    });-->
-
-<!--    $('#myModal__close, #myOverlay').click(function () {-->
-<!--        $('#myModal').animate({opacity: 0}, 198, function () {-->
-<!--            $(this).css('display', 'none');-->
-<!--            $('#myOverlay').fadeOut(297);-->
-<!--        });-->
-<!--    });-->
-<!--    $('#close, #myOverlay').click(function () {-->
-<!--        $('#myModal').animate({opacity: 0}, 198, function () {-->
-<!--            $(this).css('display', 'none');-->
-<!--            $('#myOverlay').fadeOut(297);-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
 <script>
     let subMenu = document.getElementById("subMenu");
 
